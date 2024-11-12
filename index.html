@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- 禁用缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 完全禁止放大缩小 -->
     <title>GigaFile便削除ファイル保管庫</title>
     <style>
         body {
@@ -30,13 +30,16 @@
         .button-container {
             display: flex;
             gap: 10px;
+            width: 100%; /* 确保按钮容器占满宽度 */
+            justify-content: center;
         }
         button {
             padding: 15px 0; /* 调整按钮的内边距，仅保留上下填充 */
-            font-size: 1.2em; /* 增大字体大小 */
+            font-size: 1em; /* 调整字体大小 */
             cursor: pointer;
-            width: 200px; /* 设置较长的按钮宽度，使其呈长方形 */
-            border-radius: 8px; /* 增加圆角使按钮更现代 */
+            width: 45%; /* 按钮宽度设为 45% ，在不同设备上自适应 */
+            max-width: 200px; /* 设置最大宽度，避免过宽 */
+            border-radius: 8px; /* 增加圆角 */
             background-color: #007bff; /* 背景色 */
             color: #fff; /* 字体颜色 */
             border: none; /* 移除边框 */
