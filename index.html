@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta property="og:description" content="無料大容量 ファイル転送サービス GigaFile（ギガファイル）便！「３日～１００日」選べる７種類のファイルの保持期限に加え、１ファイル300Gまでアップロード、共有可能！もちろん容量無制限でアンチウイルス装備。会員登録も不要です。" />
     <meta property="og:image" content="https://gigafile.cc/images/og_new_200_60.png" />
@@ -16,7 +15,7 @@
     <link rel="canonical" href="https://gigafile.cc/" />
     <meta name="keywords" content="大容量ファイル,ファイル送信,無料ファイル転送,オンラインストレージ,ファイル送受信,大容量データ転送,容量無制限,アンチウイルス" />
     <meta name="description" content="無料大容量 ファイル転送サービス GigaFile（ギガファイル）便！「３日～１００日」選べる７種類のファイルの保持期限に加え、１ファイル300Gまでアップロード、共有可能！もちろん容量無制限でアンチウイルス装備。会員登録も不要です。" />
-	
+    
     <title>GigaFile便削除ファイル保管庫</title>
     <style>
         body {
@@ -27,6 +26,11 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+        }
+        h1 {
+            margin: 5px 0; /* Reduce margin to decrease space between headings */
+            font-size: 1.5em;
+            text-align: center;
         }
         #urlDisplay {
             margin: 20px;
@@ -46,7 +50,13 @@
             padding: 10px 20px;
             font-size: 1em;
             cursor: pointer;
-            width: 150px;  /* Set the button width to make them equal size */
+            width: 150px; /* Set the button width to make them equal size */
+        }
+        /* Responsive styling to ensure button size consistency */
+        @media (max-width: 768px) {
+            button {
+                width: 150px; /* Ensure buttons remain same size on mobile */
+            }
         }
     </style>
 </head>
@@ -83,27 +93,7 @@
             '81.gigafile.cc', '82.gigafile.cc', '83.gigafile.cc', '84.gigafile.cc', '85.gigafile.cc',
             '86.gigafile.cc', '87.gigafile.cc', '88.gigafile.cc', '89.gigafile.cc', '90.gigafile.cc',
             '91.gigafile.cc', '92.gigafile.cc', '93.gigafile.cc', '94.gigafile.cc', '95.gigafile.cc',
-            '96.gigafile.cc', '97.gigafile.cc', '98.gigafile.cc', '99.gigafile.cc', '100.gigafile.cc',
-            '101.gigafile.cc', '102.gigafile.cc', '103.gigafile.cc', '104.gigafile.cc', '105.gigafile.cc',
-            '106.gigafile.cc', '107.gigafile.cc', '108.gigafile.cc', '109.gigafile.cc', '110.gigafile.cc',
-            '111.gigafile.cc', '112.gigafile.cc', '113.gigafile.cc', '114.gigafile.cc', '115.gigafile.cc',
-            '116.gigafile.cc', '117.gigafile.cc', '118.gigafile.cc', '119.gigafile.cc', '120.gigafile.cc',
-            '121.gigafile.cc', '122.gigafile.cc', '123.gigafile.cc', '124.gigafile.cc', '125.gigafile.cc',
-            '126.gigafile.cc', '127.gigafile.cc', '128.gigafile.cc', '129.gigafile.cc', '130.gigafile.cc',
-            '131.gigafile.cc', '132.gigafile.cc', '133.gigafile.cc', '134.gigafile.cc', '135.gigafile.cc',
-            '136.gigafile.cc', '137.gigafile.cc', '138.gigafile.cc', '139.gigafile.cc', '140.gigafile.cc',
-            '141.gigafile.cc', '142.gigafile.cc', '143.gigafile.cc', '144.gigafile.cc', '145.gigafile.cc',
-            '146.gigafile.cc', '147.gigafile.cc', '148.gigafile.cc', '149.gigafile.cc', '150.gigafile.cc',
-            '151.gigafile.cc', '152.gigafile.cc', '153.gigafile.cc', '154.gigafile.cc', '155.gigafile.cc',
-            '156.gigafile.cc', '157.gigafile.cc', '158.gigafile.cc', '159.gigafile.cc', '160.gigafile.cc',
-            '161.gigafile.cc', '162.gigafile.cc', '163.gigafile.cc', '164.gigafile.cc', '165.gigafile.cc',
-            '166.gigafile.cc', '167.gigafile.cc', '168.gigafile.cc', '169.gigafile.cc', '170.gigafile.cc',
-            '171.gigafile.cc', '172.gigafile.cc', '173.gigafile.cc', '174.gigafile.cc', '175.gigafile.cc',
-            '176.gigafile.cc', '177.gigafile.cc', '178.gigafile.cc', '179.gigafile.cc', '180.gigafile.cc',
-            '181.gigafile.cc', '182.gigafile.cc', '183.gigafile.cc', '184.gigafile.cc', '185.gigafile.cc',
-            '186.gigafile.cc', '187.gigafile.cc', '189.gigafile.cc', '190.gigafile.cc', '191.gigafile.cc',
-            '192.gigafile.cc', '193.gigafile.cc', '194.gigafile.cc', '195.gigafile.cc', '196.gigafile.cc',
-            '197.gigafile.cc', '198.gigafile.cc', '199.gigafile.cc', '200.gigafile.cc'
+            '96.gigafile.cc', '97.gigafile.cc', '98.gigafile.cc', '99.gigafile.cc', '100.gigafile.cc'
         ];
 
         function generateRandomParam() {
@@ -124,17 +114,14 @@
             navigator.clipboard.writeText(urlText);
         }
     </script>
-	  
-	<!-- Google tag (gtag.js) -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SKSDEWQ57"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7SKSDEWQ57');
-  </script>
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7SKSDEWQ57');
+    </script>
 
 </body>
 </html>
