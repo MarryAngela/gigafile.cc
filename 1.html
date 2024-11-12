@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止页面缩放 -->
+    <title>GigaFile便削除ファイル保管庫</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin: 5px 0; /* 调整标题间距 */
+        }
+        #urlDisplay {
+            margin: 20px;
+            padding: 10px;
+            font-size: 1.2em;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            min-width: 250px;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            width: 100%; /* 按钮容器宽度 */
+            justify-content: center;
+        }
+        button {
+            padding: 15px 0;
+            font-size: 1em;
+            cursor: pointer;
+            width: 45%; /* 使用百分比宽度兼容不同设备 */
+            max-width: 200px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GigaFile便</h1>
+    <h1>削除ファイル保管庫</h1>
+
+    <div id="urlDisplay">「ランダム取得」をクリックして、ランダムなファイルのURLを取得してください。</div>
+
+    <div class="button-container">
+        <button onclick="generateURL()">ランダム取得</button>
+        <button onclick="copyURL()">URLをコピー</button>
+    </div>
+
+    <script>
+        const urls = [
+            '1.gigafile.cc', '2.gigafile.cc', '3.gigafile.cc', '4.gigafile.cc', '5.gigafile.cc'
+        ];
+
+        function generateRandomParam() {
+            const prefix = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+            const randomHash = Array.from(crypto.getRandomValues(new Uint8Array(16)))
+                .map(b => b.toString(16).padStart(2, '0')).join('');
+            return `/?${prefix}-${randomHash}`;
+        }
+
+        function generateURL() {
+            const randomURL = urls[Math.floor(Math.random() * urls.length)];
+            const randomParam = generateRandomParam();
+            document.getElementById('urlDisplay').innerText = `${randomURL}${randomParam}`;
+        }
+
+        function copyURL() {
+            const urlText = document.getElementById('urlDisplay').innerText;
+            navigator.clipboard.writeText(urlText);
+        }
+    </script>
+
+</body>
+</html>
