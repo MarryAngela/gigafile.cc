@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 完全禁止放大缩小 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- 禁止页面缩放 -->
     <title>GigaFile便削除ファイル保管庫</title>
     <style>
         body {
@@ -15,7 +15,7 @@
             margin: 0;
         }
         h1 {
-            margin: 5px 0; /* 调整标题的上下间距 */
+            margin: 5px 0; /* 调整标题间距 */
         }
         #urlDisplay {
             margin: 20px;
@@ -30,22 +30,16 @@
         .button-container {
             display: flex;
             gap: 10px;
-            width: 100%; /* 确保按钮容器占满宽度 */
+            width: 100%; /* 按钮容器宽度 */
             justify-content: center;
         }
         button {
-            padding: 15px 0; /* 调整按钮的内边距，仅保留上下填充 */
-            font-size: 1em; /* 调整字体大小 */
+            padding: 15px 0;
+            font-size: 1em;
             cursor: pointer;
-            width: 45%; /* 按钮宽度设为 45% ，在不同设备上自适应 */
-            max-width: 200px; /* 设置最大宽度，避免过宽 */
-            border-radius: 8px; /* 增加圆角 */
-            background-color: #007bff; /* 背景色 */
-            color: #fff; /* 字体颜色 */
-            border: none; /* 移除边框 */
-        }
-        button:hover {
-            background-color: #0056b3; /* 增加按钮悬停效果 */
+            width: 45%; /* 使用百分比宽度兼容不同设备 */
+            max-width: 200px;
+            border-radius: 8px;
         }
     </style>
 </head>
