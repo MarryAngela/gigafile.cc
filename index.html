@@ -3,19 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:card" content="summary">
-    <meta property="og:description" content="無料大容量 ファイル転送サービス GigaFile（ギガファイル）便！「３日～１００日」選べる７種類のファイルの保持期限に加え、１ファイル300Gまでアップロード、共有可能！もちろん容量無制限でアンチウイルス装備。会員登録も不要です。" />
-    <meta property="og:image" content="https://gigafile.cc/images/og_new_200_60.png" />
-    <meta property="og:image:width" content="250" />
-    <meta property="og:image:height" content="250" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="robots" content="noindex,nofollow,noarchive" />
-    <meta property="og:url" content="https://gigafile.cc/" />
-    <meta property="og:title" content="GigaFile便削除ファイル保管庫" />
-    <link rel="canonical" href="https://gigafile.cc/" />
-    <meta name="keywords" content="大容量ファイル,ファイル送信,無料ファイル転送,オンラインストレージ,ファイル送受信,大容量データ転送,容量無制限,アンチウイルス" />
-    <meta name="description" content="無料大容量 ファイル転送サービス GigaFile（ギガファイル）便！「３日～１００日」選べる７種類のファイルの保持期限に加え、１ファイル300Gまでアップロード、共有可能！もちろん容量無制限でアンチウイルス装備。会員登録も不要です。" />
-    
     <title>GigaFile便削除ファイル保管庫</title>
     <style>
         body {
@@ -26,11 +13,6 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-        }
-        h1 {
-            margin: 5px 0; /* Reduce margin to decrease space between headings */
-            font-size: 1.5em;
-            text-align: center;
         }
         #urlDisplay {
             margin: 20px;
@@ -47,16 +29,10 @@
             gap: 10px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 1em;
+            padding: 15px 30px; /* 增大按钮的内边距 */
+            font-size: 1.2em; /* 增大字体大小 */
             cursor: pointer;
-            width: 150px; /* Set the button width to make them equal size */
-        }
-        /* Responsive styling to ensure button size consistency */
-        @media (max-width: 768px) {
-            button {
-                width: 150px; /* Ensure buttons remain same size on mobile */
-            }
+            width: 180px;  /* 设置按钮宽度 */
         }
     </style>
 </head>
@@ -75,25 +51,7 @@
     <script>
         const urls = [
             '1.gigafile.cc', '2.gigafile.cc', '3.gigafile.cc', '4.gigafile.cc', '5.gigafile.cc',
-            '6.gigafile.cc', '7.gigafile.cc', '8.gigafile.cc', '9.gigafile.cc', '10.gigafile.cc',
-            '11.gigafile.cc', '12.gigafile.cc', '13.gigafile.cc', '14.gigafile.cc', '15.gigafile.cc',
-            '16.gigafile.cc', '17.gigafile.cc', '18.gigafile.cc', '19.gigafile.cc', '20.gigafile.cc',
-            '21.gigafile.cc', '22.gigafile.cc', '23.gigafile.cc', '24.gigafile.cc', '25.gigafile.cc',
-            '26.gigafile.cc', '27.gigafile.cc', '28.gigafile.cc', '29.gigafile.cc', '30.gigafile.cc',
-            '31.gigafile.cc', '32.gigafile.cc', '33.gigafile.cc', '34.gigafile.cc', '35.gigafile.cc',
-            '36.gigafile.cc', '37.gigafile.cc', '38.gigafile.cc', '39.gigafile.cc', '40.gigafile.cc',
-            '41.gigafile.cc', '42.gigafile.cc', '43.gigafile.cc', '44.gigafile.cc', '45.gigafile.cc',
-            '46.gigafile.cc', '47.gigafile.cc', '48.gigafile.cc', '49.gigafile.cc', '50.gigafile.cc',
-            '51.gigafile.cc', '52.gigafile.cc', '53.gigafile.cc', '54.gigafile.cc', '55.gigafile.cc',
-            '56.gigafile.cc', '57.gigafile.cc', '58.gigafile.cc', '59.gigafile.cc', '60.gigafile.cc',
-            '61.gigafile.cc', '62.gigafile.cc', '63.gigafile.cc', '64.gigafile.cc', '65.gigafile.cc',
-            '66.gigafile.cc', '67.gigafile.cc', '68.gigafile.cc', '69.gigafile.cc', '70.gigafile.cc',
-            '71.gigafile.cc', '72.gigafile.cc', '73.gigafile.cc', '74.gigafile.cc', '75.gigafile.cc',
-            '76.gigafile.cc', '77.gigafile.cc', '78.gigafile.cc', '79.gigafile.cc', '80.gigafile.cc',
-            '81.gigafile.cc', '82.gigafile.cc', '83.gigafile.cc', '84.gigafile.cc', '85.gigafile.cc',
-            '86.gigafile.cc', '87.gigafile.cc', '88.gigafile.cc', '89.gigafile.cc', '90.gigafile.cc',
-            '91.gigafile.cc', '92.gigafile.cc', '93.gigafile.cc', '94.gigafile.cc', '95.gigafile.cc',
-            '96.gigafile.cc', '97.gigafile.cc', '98.gigafile.cc', '99.gigafile.cc', '100.gigafile.cc'
+            '6.gigafile.cc', '7.gigafile.cc', '8.gigafile.cc', '9.gigafile.cc', '10.gigafile.cc'
         ];
 
         function generateRandomParam() {
@@ -113,14 +71,6 @@
             const urlText = document.getElementById('urlDisplay').innerText;
             navigator.clipboard.writeText(urlText);
         }
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SKSDEWQ57"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-7SKSDEWQ57');
     </script>
 
 </body>
