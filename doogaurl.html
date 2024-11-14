@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画URL収集ツール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>動画URLを入力してください</h2>
+        <textarea id="videoInput" placeholder="1行に1つの動画URL"></textarea>
+        <button onclick="copyToClipboard()">JSON形式でコピー</button>
+        <p id="message" style="color: green;"></p>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const input = document.getElementById('videoInput').value.trim();
+            const urls = input.split('\n').filter(line => line.trim() !== "");
+            const jsonOutput = {
+                "videos": urls
+            };
+            const jsonString = JSON.stringify(jsonOutput, null, 4);
+
+            navigator.clipboard.writeText(jsonString).then(() => {
+                document.getElementById('message').textContent = "クリップボードにコピーしました！";
+            }).catch(err => {
+                console.error("コピーに失敗しました: ", err);
+                document.getElementById('message').textContent = "コピーに失敗しました。手動でコピーしてください。";
+            });
+        }
+    </script>
+</body>
+</html>
